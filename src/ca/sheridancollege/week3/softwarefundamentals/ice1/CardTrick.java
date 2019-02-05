@@ -44,7 +44,7 @@ public class CardTrick {
         
         boolean found = false; 
         for(int sub = 0; sub < magicHand.length; sub++){
-            if(magicHand[sub].getValue() == value && magicHand[sub].getSuit() == suit){
+            if(magicHand[sub].getValue() == value && magicHand[sub].getSuit().equals(suit)){
                 found = true; 
             }
         }
