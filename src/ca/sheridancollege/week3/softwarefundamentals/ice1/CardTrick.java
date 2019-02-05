@@ -17,7 +17,7 @@ public class CardTrick {
         Card luckyCard = new Card();
         luckyCard.setValue(1);
         luckyCard.setSuit("hearts");
-        
+
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             c.setValue((int) Math.round(Math.random() * 13) + 1); //random int btwn from 1 to 13
@@ -27,19 +27,37 @@ public class CardTrick {
         }
         Card newCard = new Card();
 
+        //7.Safely merge the code into your NetBeans project,
+        //replacing the code that was asking the user to create a
+        //card with your new (hard-coded) luckyCard Object. The code 
+        //should now search the randomly generated array of 7 cards for
+        //the hard-coded lucky card. If it is there, report a wining message
+        //to the user. Otherwise, report a losing message.
+        
+        
         //insert code to ask the user for Card value and suit, create their card
-        Scanner s = new Scanner(System.in);
+//        Scanner s = new Scanner(System.in);
         //value form user
-        System.out.print("please enter a card value (Ace = 1, Jack -11, Queen =12, King = 13): \n--->");
-        newCard.setValue(s.nextInt());
+//        System.out.print("please enter a card value (Ace = 1, Jack -11, Queen =12, King = 13): \n--->");
+//        newCard.setValue(s.nextInt());
         //suit from user
-        System.out.print("please enter a card suit (clubs = 1, hearts = 2, spades 3, diamonds = 4): \n--->");
-        newCard.setSuit(Card.SUITS[s.nextInt()]);
+//        System.out.print("please enter a card suit (clubs = 1, hearts = 2, spades 3, diamonds = 4): \n--->");
+//        newCard.setSuit(Card.SUITS[s.nextInt()]);
+
+
 
         // and search magicHand here
         boolean isFound = false;
         for (Card card : magicHand) {
             if (card.getSuit().equals(newCard.getSuit()) && card.getValue() == newCard.getValue()) {
+                isFound = true;
+            }
+        }
+        
+             
+        // compare luckyCard with magicHand
+         for (Card card : magicHand) {
+            if (card.getSuit().equals(luckyCard.getSuit()) && card.getValue() == luckyCard.getValue()) {
                 isFound = true;
             }
         }
