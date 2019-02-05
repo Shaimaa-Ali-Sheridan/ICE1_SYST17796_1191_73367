@@ -14,7 +14,10 @@ public class CardTrick {
 
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
-
+        Card luckyCard = new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit("hearts");
+        
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             c.setValue((int) Math.round(Math.random() * 13) + 1); //random int btwn from 1 to 13
