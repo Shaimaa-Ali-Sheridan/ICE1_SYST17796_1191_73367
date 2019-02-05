@@ -36,6 +36,10 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         
+        Card luckyCard = new Card(); 
+        luckyCard.setSuit("Spades"); 
+        luckyCard.setValue(10); 
+        
         Scanner k = new Scanner(System.in); 
         System.out.println("Pick any suit (Hearts, Diamonds, Clubs, Spades): ");
         String suit = k.next(); 
