@@ -22,7 +22,7 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         
         Card luckyCard = new Card();
-        luckyCard.setSuit(Card.SUIT[1]);
+        luckyCard.setSuit(Card.SUITS[1]);
         luckyCard.setValue(1);
         
 
@@ -46,8 +46,8 @@ public class CardTrick {
         a.setSuit(Card.SUITS[suit]);
         boolean isFound = false;
         for (Card card : magicHand) {
-            if (card.getSuit().equals(a.getSuit())
-                 && card.getValue() == card.getValue()){
+            if (card.getSuit().equals(luckyCard.getSuit())
+                 && card.getValue() == luckyCard.getValue()){
                 isFound = true;
             }
             
