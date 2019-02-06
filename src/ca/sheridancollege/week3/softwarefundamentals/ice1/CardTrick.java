@@ -29,31 +29,22 @@ public class CardTrick {
             c.setSuit(Card.SUITS[(int)(Math.random()*3)]);
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        System.out.print("Pick a card number(1-13):");
-        int choice = k.nextInt();
-        
-        System.out.print("Pick a suit(hearts, spades, diamonds and clubs):");
-        String suit = k.next();
-       
-        // and search magicHand here
-        
-        for(int i = 0; i<7; i++){
-            System.out.println(i+" "+magicHand[i].getValue()+ " suit:" + magicHand[i].getSuit());
-            
-        }
+        Card luckyCard = new Card();
+        luckyCard.setValue(5);
+        luckyCard.setSuit("hearts");
         
         boolean cardFound = false;
+        
         for (int i = 0; i<7; i++){
-             if(choice == magicHand[i].getValue() && suit.equalsIgnoreCase(magicHand[i].getSuit())){
+             if(luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
                  cardFound = true;
                  break;
              }
         }
         if(cardFound){
-            System.out.println("Card Found");
+            System.out.println("Card found. You Win.");
         }else
-            System.out.println("Not Found");
+            System.out.println("Card not found. You lose");
         
         //Then report the result here
     }
