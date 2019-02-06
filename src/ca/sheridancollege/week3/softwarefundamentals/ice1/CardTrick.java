@@ -10,14 +10,15 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
- * @author Gregory Tatel
+ * @author Gregory Tatel 
+ * Student Number:991545515
  */
 public class CardTrick {
     
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
-        
+        System.out.println("Picking up 7 cards at random.");
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
@@ -28,7 +29,7 @@ public class CardTrick {
         
         Card luckyCard = new Card();
         luckyCard.setValue(5);
-        luckyCard.setSuit("hearts");
+        luckyCard.setSuit("Hearts");
         
         boolean cardFound = false;
         
@@ -39,9 +40,9 @@ public class CardTrick {
              }
         }
         if(cardFound){
-            System.out.println("Card found. You Win.");
+            System.out.println("Lucky Card found. You Win.");
         }else
-            System.out.println("Card not found. You lose");
+            System.out.println("Lucky Card not found. You Lose.");
         
         //Then report the result here
     }
