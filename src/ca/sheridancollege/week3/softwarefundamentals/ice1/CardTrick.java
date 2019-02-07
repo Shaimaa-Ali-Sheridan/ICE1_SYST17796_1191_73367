@@ -28,9 +28,9 @@ public class CardTrick {
             Card c = new Card();
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            int randomNumber = 1 + (int)((Math.random()) * 13 + 1);
+            int randomNumber = 1 + (int)((Math.random()) * 13);
             c.setValue(randomNumber);
-            int randomSuit = (int) ((Math.random()) * 3 + 1);
+            int randomSuit = (int) ((Math.random()) * 4);
             c.setSuit(Card.SUITS[randomSuit]);
             magicHand[i] = c;
                     
@@ -41,8 +41,8 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         
-        for(int j=0; j<100; j++)
-        {
+       
+       
         Scanner k = new Scanner(System.in);
         System.out.println("pick the suit (Hearts, Diamonds, Spades, Clubs)");
         String suit = k.next();
@@ -74,4 +74,4 @@ public class CardTrick {
     }
     
     
-}
+
