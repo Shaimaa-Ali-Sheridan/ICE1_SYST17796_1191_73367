@@ -18,11 +18,15 @@ public class CardTrick {
         Scanner k = new Scanner(System.in);
         Card[] magicHand = new Card[7];     
         
+        card luckyCard = new Card();
+        luckyCard.setValue(3);
+        luckyCard.setSuit("Hearts");
+        
       
         
         for (int i=0; i<magicHand.length; i++)
         {
-            Card c = new Card();
+            Card c = new Card(4, "hearts");
             
             magicHand[i] = c;
             c.setValue((int)(Math.random()*13 +1));
