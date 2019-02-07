@@ -19,7 +19,7 @@ public class CardTrick {
         Card[] magicHand = new Card[7];     
         
         card luckyCard = new Card();
-        luckyCard.setValue(3);
+        luckyCard.setValue(2);
         luckyCard.setSuit("Hearts");
         
       
