@@ -45,31 +45,18 @@ public class CardTrick {
           int cardFound = 0;
           String SuitFound = "";
           
-        //  System.out.println(magicHand[0].getSuit() + " " + magicHand[0].getValue());
-         //System.out.println(UserSuit);
          
-             //System.out.println(magicHand[0].getValue());
+             
          for (int i = 0; i < magicHand.length; i++){
-          //cardFound = magicHand[i].getValue();
           
-//          System.out.println(magicHand[i].getValue() + " " + magicHand[i].getSuit());
-//          System.out.println(userCard + " " + UserSuit);
-//          System.out.println();
-          
-          if (magicHand[i].getValue() == userCard && UserSuit.equalsIgnoreCase(magicHand[i].getSuit())){ // == magicHand[i].getSuit()){
+          if (magicHand[i].getValue() == userCard && UserSuit.equalsIgnoreCase(magicHand[i].getSuit())){ 
               System.out.println("WINNER! Card was found");
               break;
         
           }
-           // System.out.println(cardFound);
-    // if (magicHand[i].getValue() == userCard); 
-              //   System.out.println("Your card was found");
-              //   break;
+           
          }
-      //System.out.println(magicHand[i].getValue());
-//           for(int i = 0; i < magicHand.length; i++){
-//if (magicHand[i].getValue() == userCard){}
-//    System.out.println("hello");
+      
 }
 
 
