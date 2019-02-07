@@ -42,6 +42,10 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         Card luckyCard = new Card();
+        luckyCard.setSuit("Diamonds");
+        luckyCard.setValue(8);
+        int val = luckyCard.getValue();
+        String suit = luckyCard.getSuit();
         
        
        
