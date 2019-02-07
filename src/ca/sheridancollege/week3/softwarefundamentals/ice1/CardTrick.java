@@ -47,14 +47,7 @@ public class CardTrick {
         int val = luckyCard.getValue();
         String suit = luckyCard.getSuit();
         
-       
-       
-        Scanner k = new Scanner(System.in);
-        System.out.println("pick the suit (Hearts, Diamonds, Spades, Clubs)");
-        String suit = k.next();
-        System.out.println("Pick the value (1 to 13)");
-        int val = k.nextInt();
-        
+      
          boolean found = false;
         for(int i=0; i<magicHand.length; i++)
         {
@@ -63,7 +56,6 @@ public class CardTrick {
             {
                 found =true;
             }
-                
         }
         
         if(found == true)
