@@ -12,6 +12,7 @@ import java.util.Scanner;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
  * @author Gregory Tatel
+ * Student I.D:
  */
 public class CardTrick {
     
@@ -25,8 +26,8 @@ public class CardTrick {
         {
             Card c = new Card();
             magicHand[i] = c;
-            c.setValue((int) (1+Math.random()*12));
-            c.setSuit(Card.SUITS[(int)(Math.random()*3)]);
+            c.setValue((int) (1+Math.random()*13));
+            c.setSuit(Card.SUITS[(int)(Math.random()*4)]);
         }
         
         //insert code to ask the user for Card value and suit, create their card
