@@ -5,23 +5,20 @@
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
-import java.util.Scanner;
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
- * @author Gregory Tatel
- * Student I.D: 991545515
+ * @author Gregory Tatel 
+ * Student Number:991545515
  */
 public class CardTrick {
     
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
-        
-        Scanner k = new Scanner(System.in);
-        
+        System.out.println("Picking up 7 cards at random.");
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
@@ -30,31 +27,22 @@ public class CardTrick {
             c.setSuit(Card.SUITS[(int)(Math.random()*4)]);
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        System.out.print("Pick a card number(1-13):");
-        int choice = k.nextInt();
-        
-        System.out.print("Pick a suit(hearts, spades, diamonds and clubs):");
-        String suit = k.next();
-       
-        // and search magicHand here
-        
-        for(int i = 0; i<7; i++){
-            System.out.println(i+" "+magicHand[i].getValue()+ " suit:" + magicHand[i].getSuit());
-            
-        }
+        Card luckyCard = new Card();
+        luckyCard.setValue(13);
+        luckyCard.setSuit("Clubs");
         
         boolean cardFound = false;
+        
         for (int i = 0; i<7; i++){
-             if(choice == magicHand[i].getValue() && suit.equalsIgnoreCase(magicHand[i].getSuit())){
+             if(luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
                  cardFound = true;
                  break;
              }
         }
         if(cardFound){
-            System.out.println("Card Found");
+            System.out.println("Lucky Card found. You Win.");
         }else
-            System.out.println("Not Found");
+            System.out.println("Lucky Card not found. You Lose.");
         
         //Then report the result here
     }
