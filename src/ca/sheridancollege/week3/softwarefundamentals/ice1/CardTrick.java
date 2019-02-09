@@ -26,7 +26,7 @@ public class CardTrick {
         
         for (int i=0; i<magicHand.length; i++)
         {
-            Card c = new Card(4, "hearts");
+            Card c = new Card();
             
             magicHand[i] = c;
             c.setValue((int)(Math.random()*13 +1));
