@@ -19,7 +19,7 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
-        Scanner s = new Scanner(System.in);
+        //Scanner s = new Scanner(System.in);
         Card[] magicHand = new Card[7];
         
         for (int i=0; i<magicHand.length; i++)
@@ -32,10 +32,18 @@ public class CardTrick {
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
         
-        System.out.println("Please pick a suit from(0 to 3)");
+       /* System.out.println("Please pick a suit from(0 to 3)");
         int suit = s.nextInt();
         System.out.println("Please pick a card value from (1 to 13)");
-        int card = s.nextInt();
+        int card = s.nextInt();*/
+        
+        //Create luckyCard object
+        Card luckyCard = new Card();
+             luckyCard.setValue(4);
+             luckyCard.setSuit(luckyCard.SUITS[2]);
+        String suit = luckyCard.getSuit();
+        int card = luckyCard.getValue();
+        
         boolean isFound = false;
         
         for(int i=0; i<magicHand.length; i++){
