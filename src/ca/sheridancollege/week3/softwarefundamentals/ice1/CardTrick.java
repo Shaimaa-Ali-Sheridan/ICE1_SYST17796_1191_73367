@@ -39,9 +39,10 @@ public class CardTrick {
         
         //Create luckyCard object
         Card luckyCard = new Card();
-        int card = luckyCard.setValue(4);
-        int suit= luckyCard.setSuit(luckyCard.SUITS[2]);
-        magicHand[5] = luckyCard;
+             luckyCard.setValue(4);
+             luckyCard.setSuit(luckyCard.SUITS[2]);
+        String suit = luckyCard.getSuit();
+        int card = luckyCard.getValue();
         
         boolean isFound = false;
         
