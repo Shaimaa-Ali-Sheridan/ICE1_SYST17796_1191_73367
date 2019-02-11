@@ -47,16 +47,20 @@ public class CardTrick {
         boolean isFound = false;
         
         for(int i=0; i<magicHand.length; i++){
-            if(suit>=0 && suit <=3){
-             if(card >= 1 && card <= 13)
-                isFound =true;
+           /* if(suit>=0 && suit <=3){
+             if(card >= 1 && card <= 13)*/
+           
+             if((magicHand[i].getValue() == card) && (magicHand[i].getSuit().equals(suit)))
+                 isFound =true;
             }
-        }
         
         if(isFound)
-            System.out.println("The card you picked is "+card+" "+Card.SUITS[suit]);
+           // System.out.println("The card you picked is "+card+" "+Card.SUITS[suit]);
+            System.out.println("Your card is found, you Win!!");
         else 
-            System.out.println("Not found");
+            //System.out.println("Not found");
+            System.out.println("Your card isn't found, you lose.....");
+            
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
