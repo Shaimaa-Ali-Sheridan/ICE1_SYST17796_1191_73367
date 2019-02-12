@@ -20,14 +20,14 @@ public class CardTrick {
 
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
-        Scanner sc = new Scanner(System.in);
-        
-        Card luckyCard=new Card();
+        //Scanner sc = new Scanner(System.in);
+
+        Card luckyCard = new Card();
         luckyCard.setValue(1);
         luckyCard.setSuit("Spades");
-        
+
         Card c = new Card();
-        
+
         for (int i = 0; i < magicHand.length; i++) {
             c.setValue((int) (Math.random() * 13 + 1));
             c.setSuit(Card.SUITS[(int) (Math.random() * 4)]);
@@ -36,22 +36,22 @@ public class CardTrick {
             magicHand[i].setValue(c.getValue());
         }
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Enter Suit (clubs, spades, diamonds, hearts)");
+        /*System.out.println("Enter Suit (clubs, spades, diamonds, hearts)");
         c.setSuit(sc.nextLine());
 
         System.out.println("Enter Card Value (1-13)");
-        c.setValue(sc.nextInt());
+        c.setValue(sc.nextInt());*/
 
         // and search magicHand here
         for (int i = 0; i < magicHand.length; i++) {
             //System.out.println(magicHand[i].getValue() + magicHand[i].getSuit()); // display 7 cards
-            if (magicHand[i].getValue() == c.getValue() && magicHand[i].getSuit().equalsIgnoreCase(c.getSuit())) {
+            if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
                 //Then report the result here
-                System.out.println("Card Found");
+                System.out.println("Card Found! You Won!!!!");
                 break;
             }
             if (i == magicHand.length - 1) {
-                System.out.println("Not Found");
+                System.out.println("Not Found!? You Lost!!!");
             }
 
         }
