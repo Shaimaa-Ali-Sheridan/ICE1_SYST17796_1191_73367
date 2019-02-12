@@ -13,6 +13,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
+ * @modifier chris korolyk feb 5
  */
 public class Card {
 
@@ -48,6 +49,23 @@ public class Card {
         this.value = value;
     }
    
+   public Card (){
+       this.value = 1;
+       this.suit = "Clubs";
+   }
    
+   public Card (int cv, String cs){
+       this.value = cv;
+       this.suit = cs;
+   }
+   
+   public String toString(){
+       return (getValue() +" of "+getSuit());
+   }
+   
+   public boolean equals(Object ob){
+       if ((this.getValue() == ((Card)ob).getValue()) && (this.getSuit() == ((Card)ob).getSuit())) return true;
+       else return false;
+   }
     
 }
