@@ -15,7 +15,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
 import java.util.Scanner;
 public class CardTrick {
     
-    public static void main(String[] args)
+   public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
         Scanner var = new Scanner(System.in);
