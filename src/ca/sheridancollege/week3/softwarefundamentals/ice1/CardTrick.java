@@ -27,7 +27,7 @@ public class CardTrick {
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
        //     Card c = new Card();
             magicHand[i] = new Card();
-            int trackNum = (int)(Math.random() * 13) + 1;
+            int trackNum = (int)(Math.random() * 7) + 1;
             magicHand[i].setValue(trackNum);
             int trackSuitNum = (int)(Math.random() * 3);
             magicHand[i].setSuit(Card.SUITS[trackSuitNum]);
@@ -43,19 +43,32 @@ public class CardTrick {
         System.out.println("Pick A Number");
         System.out.println("Enter A Card Suit: (Diamond, Spades, Hearts, Clubs)");
         String suit = var.nextLine();
-        System.out.println("Enter A Card Value: (1-13)");
+        System.out.println("Enter A Card Value: (1-7)");
         int clientValue = var.nextInt(); 
+        boolean found = true;
         
         for (int i = 0; i <magicHand.length; i++) {
             
            if (clientValue == magicHand[i].getValue() && suit.equalsIgnoreCase(magicHand[i].getSuit())) { 
-                System.out.println("You WIN"); 
+               if (luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
+                   //System.out.println("You WIN"); 
+               }
+               
+                
             }
             else {
-                System.out.println("You lost"); 
+               found= false;
+               
+                //System.out.println("You lost"); 
             }
+           
         }
-    
+    if (found ==true){
+        System.out.println("the number is found");
+    }
+    else{
+        System.out.println("Number is not found");
+    }
     
         
 }
