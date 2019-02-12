@@ -21,7 +21,13 @@ public class CardTrick {
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
         Scanner sc = new Scanner(System.in);
+        
+        Card luckyCard=new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Spades");
+        
         Card c = new Card();
+        
         for (int i = 0; i < magicHand.length; i++) {
             c.setValue((int) (Math.random() * 13 + 1));
             c.setSuit(Card.SUITS[(int) (Math.random() * 4)]);
