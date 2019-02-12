@@ -64,10 +64,10 @@ public class CardTrick {
            
         }
     if (found ==true){
-        System.out.println("the number is found");
+        System.out.println("the number is found,you won");
     }
     else{
-        System.out.println("Number is not found");
+        System.out.println("Number is not found,you lost");
     }
     
         
