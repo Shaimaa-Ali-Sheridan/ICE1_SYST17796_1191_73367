@@ -20,7 +20,9 @@ public class CardTrick {
 
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
-
+        Card luckyCard=new Card();
+        luckyCard.setSuit("hearts");
+        luckyCard.setValue(1);
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             c.setValue((int) ((Math.random() * 12) + 1));
@@ -36,7 +38,7 @@ public class CardTrick {
         boolean cardFound = false;
         int index = 0;
         for (int i = 0; i < magicHand.length; i++) {
-            if (magicHand[i].getValue() == value && magicHand[i].getSuit().equalsIgnoreCase(string)) {
+            if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equalsIgnoreCase(luckyCard.getSuit())){
                 cardFound = true;
                 index = i;
                 break;
@@ -44,9 +46,9 @@ public class CardTrick {
         }
 
         if (cardFound == true) {
-            System.out.println("-------The Card Seleted by user is Found: " + magicHand[index].getValue() + " " + magicHand[index].getSuit());
+            System.out.println("congratulations! You Won.");
         } else {
-            System.out.println("The Card Entered By user not Found.");
+            System.out.println("opps! You Lost.");
         }
     }
 
