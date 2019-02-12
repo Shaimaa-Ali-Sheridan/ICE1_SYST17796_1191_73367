@@ -11,6 +11,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
  * @modifier Harman Bath
+ * Due Date: Feb 12th, 2019
  * 991540198
  */
 import java.util.Scanner; 
@@ -45,6 +46,9 @@ public class CardTrick {
         String suit = k.next(); 
         System.out.println("Pick the card number (1-13): ");
         int value = k.nextInt(); 
+        
+        int val = luckyCard.getValue();
+        String psuit = luckyCard.getSuit(); 
         
         boolean found = false; 
         for(int sub = 0; sub < magicHand.length; sub++){
