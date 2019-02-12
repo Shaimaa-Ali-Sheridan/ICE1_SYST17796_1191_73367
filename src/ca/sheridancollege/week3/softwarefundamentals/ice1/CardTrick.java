@@ -29,11 +29,11 @@ public class CardTrick {
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
-        //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Enter your guess card!");
-        System.out.println("Enter Card's Number and Suit separated by tab or space");
-        int cNum = input.nextInt();
-        String cSuit = input.nextLine();
+        //insert code to ask the user for Card value and suit, create their 
+        //*----------------Editing from Github------------Added lucky card object------------*
+        Card luckyCard = new Card();
+        luckyCard.setSuit("Diamonds");
+        luckyCard.setValue(5);
         boolean matchFound = false;
       
         // and search magicHand here
