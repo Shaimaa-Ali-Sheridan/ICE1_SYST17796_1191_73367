@@ -13,6 +13,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
+ * @modifier Samandeep Singh Student Number - 991500155
  */
 public class Card {
 
@@ -24,14 +25,15 @@ public class Card {
      * @return the suit
      */
     public String getSuit() {
-        return suit;
+        return this.suit;
     }
 
     /**
      * @param suit the suit to set
      */
-    public void setSuit(String suit) {
-        this.suit = suit;
+    public void setSuit() {   
+        this.suit = SUITS[(int)(Math.random() * 3)];
+       
     }
 
     /**
@@ -44,8 +46,8 @@ public class Card {
     /**
      * @param value the value to set
      */
-    public void setValue(int value) {
-        this.value = value;
+    public void setValue() {  
+        this.value = (int)(Math.random() * 12 + 1);
     }
    
    
