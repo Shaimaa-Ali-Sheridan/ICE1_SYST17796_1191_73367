@@ -37,24 +37,28 @@ public class CardTrick {
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
         
-        int userCard = 0;
-        String UserSuit = "";
-        System.out.print("Pick a card value (1-13) : " );
-        userCard = k.nextInt();
-        k.nextLine();
-        System.out.print("Pick a suit: ");
-        UserSuit = k.nextLine().trim();
-        
-        int cardFound = 0;
-        String SuitFound = "";
-        
-   
+//        int userCard = 0;
+//        String UserSuit = "";
+//        System.out.print("Pick a card value (1-13) : " );
+//        userCard = k.nextInt();
+//        k.nextLine();
+//        System.out.print("Pick a suit: ");
+//        UserSuit = k.nextLine().trim();
+//        
+//        int cardFound = 0;
+//        String SuitFound = "";
+//        
+   System.out.println("Your lucky card is the : " + luckyCard.getValue() + " " + luckyCard.getSuit());
         for (int i = 0; i < magicHand.length; i++){
         
         
-            if(magicHand[i].getValue() == userCard && UserSuit.equalsIgnoreCase(magicHand[i].getSuit())){
+//            if(magicHand[i].getValue() == userCard && UserSuit.equalsIgnoreCase(magicHand[i].getSuit())){
+            if(magicHand[i].getValue() == luckyCard.getValue() && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
             System.out.println("Winner! Card was found! ");
             break;
+         }
+            else if (i == 6) 
+            System.out.println("You lose. ");
         }
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
@@ -62,4 +66,4 @@ public class CardTrick {
     }
     
 }
-}
+
