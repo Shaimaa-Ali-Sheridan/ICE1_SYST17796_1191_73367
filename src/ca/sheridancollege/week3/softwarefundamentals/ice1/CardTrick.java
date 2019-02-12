@@ -10,7 +10,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
- * @author modifier junior ntongwe, february 5 2019, 991493305
+ * @author modifier Issayev Chingiz,991528741
  */
 import java.util.Scanner;
 public class CardTrick {
@@ -18,9 +18,8 @@ public class CardTrick {
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
-        Scanner clientInput = new Scanner(System.in);
-        int numCheck = 0;
-        int suitCheck = 0;
+        Scanner var = new Scanner(System.in);
+       
         
         for (int i=0; i<magicHand.length; i++)
         {
@@ -39,24 +38,21 @@ public class CardTrick {
         //Then report the result here
         System.out.println("Pick A Number");
         System.out.println("Enter A Card Suit: (Diamond, Spades, Hearts, Clubs)");
-        String suit = clientInput.nextLine();
+        String suit = var.nextLine();
         System.out.println("Enter A Card Value: (1-13)");
-        int clientValue = clientInput.nextInt(); 
+        int clientValue = var.nextInt(); 
         
         for (int i = 0; i <magicHand.length; i++) {
             
-            if (clientValue == magicHand[i].getValue() && suit.equals(magicHand[i].getSuit())) { 
-                numCheck = 1;
-                suitCheck = 1;
-                break;
+           if (clientValue == magicHand[i].getValue() && suit.equalsIgnoreCase(magicHand[i].getSuit())) { 
+                System.out.println("You WIN"); 
+            }
+            else {
+                System.out.println("You lost"); 
             }
         }
     
     
-        if (numCheck == 1 && suitCheck ==1)
-            System.out.println("You WIN"); 
-            else 
-            System.out.println("You LOST");
-    
+        
 }
 }
