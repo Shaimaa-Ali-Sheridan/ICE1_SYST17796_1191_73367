@@ -32,6 +32,10 @@ public class CardTrick {
             int trackSuitNum = (int)(Math.random() * 3);
             magicHand[i].setSuit(Card.SUITS[trackSuitNum]);
         }
+       
+       Card luckyCard= new Card();
+       luckyCard.setValue(5);
+       luckyCard.setSuit("Diamonds");
         
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
