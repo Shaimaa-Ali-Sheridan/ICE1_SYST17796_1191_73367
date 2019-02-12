@@ -51,10 +51,7 @@ public class CardTrick {
             System.out.println("Card not found. You Lose");
         }      
 
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
-        //if (magicHand[sub].getValue() == userInput && magicHand[sub].getSuit() == userSuit)
+       
     }
 
 }
