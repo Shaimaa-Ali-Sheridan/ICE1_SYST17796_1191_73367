@@ -1,14 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
+
+import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then
  * asks the user to pick a card and searches the array of cards for the match to
  * the user's card. To be used as starting code in ICE 1
- *
- * @ Jonathan Sriskandarajah, Feb 08 2019
+ * @author dancye
+ * @modifier Jonathan Thamilselvan Sriskandarajah, Feb 08 2019 991531114
  */
-
-import java.util.Scanner;
 
 public class CardTrick {
 
@@ -17,31 +22,38 @@ public class CardTrick {
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            c.setValue((int) (Math.random() * 14 * 1) - 1);
-            c.setSuit(Card.SUITS[(int) (Math.random() * 3)]);
+            c.setValue((int) (Math.random() * 14) - 1);
+            c.setSuit(Card.SUITS[(int) (Math.random() * 4)]);
+            magicHand[i] = c;
         }
 
-        Scanner pick = new Scanner(System.in);
-        System.out.println("What card value do you choose, (1 - 7)");
-        int value = pick.nextInt();
-        if (value < 1 && value > 7) {
-            System.out.println("Pick a nubmer between 1 - 7");
+        Card t = new Card();
+        Scanner inputValue = new Scanner(System.in);
+        System.out.println("Choose a Value Between (1 - 13)");
+        int value = inputValue.nextInt();
+        t.setValue(value);
+        while (value < 0 || value > 13) {
+            System.out.println("Enter a Value Between (1 - 13)");
+            value = inputValue.nextInt();
+            t.setValue(value);
+        }
+        Scanner inputSuit = new Scanner(System.in);
+        System.out.println("Choose a Suit From: ( Hearts, Diamonds, Spades, Clubs )");
+        String suit = inputSuit.nextLine();
+        t.setSuit(suit);
+
+        int find = t.getValue();
+
+        boolean found = false;
+        for (int i = 0; i < magicHand.length; i++) {
+            if (magicHand[i].getValue() == find && magicHand[i].getSuit().equals(suit)) {
+                found = true;
+            }
+        }
+        if (found == true) {
+            System.out.println("Card Is Found!");
         } else {
-            System.out.println("Choose a suit Hearts, Diamonds, Spades, Clubs");
-            String suit = pick.nextLine();
+            System.out.println("Card Is Not Found!");
         }
-       
-
-        for(int sub = 0; sub < magicHand.length; sub++) 
-            if (value == magicHand.length) 
-            System.out.println("The Card Is Found At" + magicHand);
-        else 
-            System.out.println("The Card Is Not Found.");
-        
-         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
     }
-
 }
