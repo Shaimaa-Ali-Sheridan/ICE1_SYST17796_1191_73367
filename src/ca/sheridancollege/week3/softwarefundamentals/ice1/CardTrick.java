@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
+import static ca.sheridancollege.week3.softwarefundamentals.ice1.Card.SUITS;
 import java.util.Scanner;
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
@@ -22,8 +23,8 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            c.setValue();
-            c.setSuit();
+            c.setValue((int)(Math.random() * 12 + 1));
+            c.setSuit(SUITS[(int)(Math.random() * 3)]);
             magicHand[i] = c;
             
             //c.setValue(insert call to random number generator here)
@@ -38,13 +39,13 @@ public class CardTrick {
       
         // and search magicHand here
         for (int i=0; i<magicHand.length; i++){
-            if(magicHand[i].getSuit().equalsIgnoreCase(cSuit) && magicHand[i].getValue() == cNum){
+            if(magicHand[i].equals(luckyCard)){
               matchFound = true;  
             }
         }
         //Then report the result here
-        if(matchFound == true) System.out.println("Your Card is in Magic Hand!");
-        else System.out.println("Your card is not in magic hand");
+        if(matchFound == true) System.out.println("You win! Your Card is in Magic Hand!");
+        else System.out.println("You Lose, Your card is not in magic hand");
     }
     
     
