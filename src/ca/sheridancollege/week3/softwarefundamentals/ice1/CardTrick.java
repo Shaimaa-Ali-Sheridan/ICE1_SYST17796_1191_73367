@@ -18,7 +18,7 @@ import java.util.Scanner;
 public class CardTrick {
 
     public static void main(String[] args) {
-        Card[] magicHand = new Card[7];
+        Card [] magicHand = new Card[7];
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
@@ -31,10 +31,19 @@ public class CardTrick {
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
+        
+        System.out.println("Type in your Suit Out of (Hearts, Diamonds, Spades, Clubs");
+        Scanner k = new Scanner(System.in);
+        String ks = k.nextLine();
+        System.out.println("Type in a number out of 1 - 13");
+        Scanner y = new Scanner(System.in);
+        int ys = y.nextInt();
+        
+        
 
         Card luckyCard = new Card();
-        luckyCard.setSuit("Hearts");
-        luckyCard.setValue(5);
+        luckyCard.setSuit(ks);
+        luckyCard.setValue(ys);
         int value = luckyCard.getValue();
         String s = luckyCard.getSuit();
  
