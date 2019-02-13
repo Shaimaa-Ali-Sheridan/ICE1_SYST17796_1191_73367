@@ -31,8 +31,8 @@ public class Card {
     /**
      * @param suit the suit to set
      */
-    public void setSuit() {   
-        this.suit = SUITS[(int)(Math.random() * 3)];
+    public void setSuit(String str) {   
+        this.suit = str;
        
     }
 
@@ -46,10 +46,18 @@ public class Card {
     /**
      * @param value the value to set
      */
-    public void setValue() {  
-        this.value = (int)(Math.random() * 12 + 1);
+    public void setValue(int val) {  
+        this.value = val;
     }
    
-   
+   public boolean equals(Object o){
+       Card cd = (Card) o;
+       if(this.getSuit() == cd.getSuit() && this.getValue() == cd.getValue()){
+           return true;
+       }
+       else{
+           return false;
+       }
+   }
     
 }
