@@ -41,7 +41,6 @@ public class CardTrick {
         System.out.println("Choose a Suit From: ( Hearts, Diamonds, Spades, Clubs )");
         String suit = inputSuit.nextLine();
         luckyCard.setSuit(suit);
-
         int find = luckyCard.getValue();
 
         boolean found = false;
