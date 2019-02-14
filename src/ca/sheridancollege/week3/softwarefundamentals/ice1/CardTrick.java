@@ -50,9 +50,9 @@ public class CardTrick {
             }
         }
         if (found == true) {
-            System.out.println("Card Is Found!");
+            System.out.println("Card Is Found!" You Win!);
         } else {
-            System.out.println("Card Is Not Found!");
+            System.out.println("Card Is Not Found!" You Lose!);
         }
     }
 }
