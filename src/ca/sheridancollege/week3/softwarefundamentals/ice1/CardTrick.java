@@ -30,17 +30,10 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Pick any Card(Hearts, Diamonds, Spades, Clubs): ");
-        String string = scanner.next();
-        System.out.println("Pick any value(1-13): ");
-        int value = scanner.nextInt();
         boolean cardFound = false;
-        int index = 0;
         for (int i = 0; i < magicHand.length; i++) {
             if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equalsIgnoreCase(luckyCard.getSuit())){
                 cardFound = true;
-                index = i;
                 break;
             }
         }
