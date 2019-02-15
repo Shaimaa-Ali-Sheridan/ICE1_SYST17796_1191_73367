@@ -21,7 +21,7 @@ public class CardTrick {
     public static void main(String[] args)
     {
         // to ask user to eneter values
-        Scanner inputs = new Scanner(System.in);
+      //  Scanner inputs = new Scanner(System.in);
         Card[] magicHand = new Card[7];
         
         for (int i=0; i< magicHand.length; i++)
@@ -33,11 +33,21 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Please pick a suite");
-        int suit = inputs.nextInt();
+      //  System.out.println("Please pick a suite");
+      //  int suit = inputs.nextInt();
         
-        System.out.println("Please pick a card");
-        int card = inputs.nextInt();
+     //   System.out.println("Please pick a card");
+     //   int card = inputs.nextInt();
+        
+        // adding a hard-coded object
+        Card luckyCard = new Card();
+        
+        // setting values for suite and card
+        luckyCard.setSuit(luckyCard.SUITS[1]);
+        int suit = luckyCard.getSuit();
+        
+        luckyCard.setValue(3);
+        int card = luckyCard.getValue();
         
         boolean isValid = false;
         
