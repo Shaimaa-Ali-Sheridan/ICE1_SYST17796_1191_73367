@@ -10,53 +10,59 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
- * @author modifier junior ntongwe, february 5 2019, 991493305
+ * @modifier 
+ * Name: Nitee Sharma
+ * Student-Id: 991511406
  */
+
 import java.util.Scanner;
 public class CardTrick {
     
     public static void main(String[] args)
     {
+        // to ask user to eneter values
+        Scanner inputs = new Scanner(System.in);
         Card[] magicHand = new Card[7];
-        Scanner clientInput = new Scanner(System.in);
-        int numCheck = 0;
-        int suitCheck = 0;
         
-        for (int i=0; i<magicHand.length; i++)
+        for (int i=0; i< magicHand.length; i++)
         {
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-       //     Card c = new Card();
-            magicHand[i] = new Card();
-            int trackNum = (int)(Math.random() * 13) + 1;
-            magicHand[i].setValue(trackNum);
-            int trackSuitNum = (int)(Math.random() * 3);
-            magicHand[i].setSuit(Card.SUITS[trackSuitNum]);
+            Card c = new Card();
+            c.setValue((int)Math.floor(Math.random()*13)+1);
+            c.setSuit(Card.SUITS[(int)Math.floor(Math.random()*3)]);
+            magicHand[i] = c;
         }
         
         //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
-        System.out.println("Pick A Number");
-        System.out.println("Enter A Card Suit: (Diamond, Spades, Hearts, Clubs)");
-        String suit = clientInput.nextLine();
-        System.out.println("Enter A Card Value: (1-13)");
-        int clientValue = clientInput.nextInt(); 
+        System.out.println("Please pick a suite");
+        int suit = inputs.nextInt();
         
-        for (int i = 0; i <magicHand.length; i++) {
+        System.out.println("Please pick a card");
+        int card = inputs.nextInt();
+        
+        boolean isValid = false;
+        
+        // and search magicHand here
+        for(int i =0; i < magicHand.length;i++){
+           if(suit >= 0 && suit <=  3){
+              if(card >=1 && card <=13)
+                System.out.println("suit:"+suit);
+                System.out.println("card:"+ card);
             
-            if (clientValue == magicHand[i].getValue() && suit.equals(magicHand[i].getSuit())) { 
-                numCheck = 1;
-                suitCheck = 1;
-                break;
+            isValid = true;
+            }
+           else{
+                System.out.println("Invalid Card and Suite!");
             }
         }
     
-    
-        if (numCheck == 1 && suitCheck ==1)
-            System.out.println("You WIN"); 
-            else 
-            System.out.println("You LOST");
-    
+        if(isValid){
+          System.out.println("Card is: "+ card+"Suite is: "+Card.SUITS[suit]);
+        }
+        else
+        {
+            System.out.println("Invalid!");
+        }
+        
+    }
 }
-}
+    
