@@ -24,6 +24,7 @@ public class CardTrick {
       //  Scanner inputs = new Scanner(System.in);
         Card[] magicHand = new Card[7];
         
+        // randomly pick the cards
         for (int i=0; i< magicHand.length; i++)
         {
             Card c = new Card();
@@ -44,7 +45,7 @@ public class CardTrick {
         
         // setting values for suite and card
         luckyCard.setSuit(luckyCard.SUITS[1]);
-        int suit = luckyCard.getSuit();
+        String suit = luckyCard.getSuit();
         
         luckyCard.setValue(3);
         int card = luckyCard.getValue();
@@ -53,11 +54,14 @@ public class CardTrick {
         
         // and search magicHand here
         for(int i =0; i < magicHand.length;i++){
-           if(suit >= 0 && suit <=  3){
+          /* if(suit >= 0 && suit <=  3){
               if(card >=1 && card <=13)
                 System.out.println("suit:"+suit);
                 System.out.println("card:"+ card);
-            
+            */
+          if((magicHand[i].getValue() == card)
+             &&(magicHand[i].getSuit().equals(suit))){
+              
             isValid = true;
             }
            else{
@@ -65,12 +69,14 @@ public class CardTrick {
             }
         }
     
-        if(isValid){
-          System.out.println("Card is: "+ card+"Suite is: "+Card.SUITS[suit]);
+        if(isValid){// if card is found then throw this
+            System.out.println("Congradulations! You win that game.");
+        //System.out.println("Card is: "+ card+"Suite is: "+Card.SUITS[suit]);
         }
         else
         {
-            System.out.println("Invalid!");
+            System.out.println("Sorry! You card is not found. Please try again.");
+      //   System.out.println("Invalid!");
         }
         
     }
