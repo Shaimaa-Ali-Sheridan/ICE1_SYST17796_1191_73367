@@ -25,7 +25,7 @@ public class CardTrick {
         one.setValue(1);
         one.setSuit("Hearts");
         boolean match = false;
-        int select = 0;
+        int sel = 0;
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
@@ -34,24 +34,16 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
-        System.out.println("Enter the card value : ");
-        int value = sc.nextInt();
-        System.out.println("Enetr Suit : ");
-        String suits = sc.next();
-
         for (int i = 0; i < magicHand.length; i++) {
             if (magicHand[i].getValue() == one.getValue()) {
                 match = true;
-                select = i;
+                sel = i;
                 break;
             }
-        }
-        
-        
-        
+        }        
 
         if (match == true) {
-            System.out.println("" + magicHand[select].getValue() + magicHand[select].getSuit());
+            System.out.println("" + magicHand[sel].getValue() + magicHand[sel].getSuit());
         } else {
             System.out.println("Card doesn't match !!!");
         }
