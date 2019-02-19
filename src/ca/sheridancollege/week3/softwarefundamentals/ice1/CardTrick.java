@@ -19,10 +19,10 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         Scanner clientInput = new Scanner(System.in);
-        int numCheck = 0;
-        int suitCheck = 0;
+        int numCheck = 1;
+        int suitCheck = 1;
         
-        for (int i=0; i<magicHand.length; i++)
+        for (int i=1; i<magicHand.length; i++)
         {
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
