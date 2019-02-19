@@ -17,8 +17,8 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
-        Card[] magicHand = new Card[7];
-          int hand = (int)(Math.random())*7;
+        Card[] magicHand = new Card[8];
+          int hand = (int)(Math.random())*8;
           
         
         for (int i=0; i<magicHand.length; i++)
