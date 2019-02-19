@@ -25,7 +25,7 @@ public class CardTrick {
         {
           
             Card c = new Card();
-            System.out.println("pick the cards");
+            System.out.println("pick the cards in other numbers of cards");
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
