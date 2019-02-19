@@ -46,6 +46,9 @@ public class CardTrick {
                 break;
             }
         }
+        
+        
+        
 
         if (match == true) {
             System.out.println("" + magicHand[select].getValue() + magicHand[select].getSuit());
